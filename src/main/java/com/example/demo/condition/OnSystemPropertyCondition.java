@@ -15,7 +15,14 @@ public class OnSystemPropertyCondition implements Condition {
 
         Map<String, Object> attributes = metadata.getAnnotationAttributes(ConditionalOnSystemProperty.class.getName());
         //查看断点结果attributes得到相应的name和value设置
+        //这里的元数据就能够获取了
+        //进行条件判断
+        String propertyName= String.valueOf(attributes.get("name"));
+        String propertyValue = String.valueOf(attributes.get("value"));
 
-        return false;
+        //参照java环境
+        String javaPropertyName = System.getProperty(propertyName);
+
+        return propertyValue.equals(javaPropertyName);//判断结果
     }
 }
