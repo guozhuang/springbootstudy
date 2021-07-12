@@ -14,7 +14,7 @@ public class EnableHelloWorldBoot {
                         .web(WebApplicationType.NONE)
                         .run(args);
 
-        String helloWorld = context.getBean("helloWorld", String.class);
+        String helloWorld = context.getBean("helloWorldEnable", String.class);
 
         System.out.println("enable:" + helloWorld);
         //关闭上下文

@@ -1,0 +1,3 @@
+#配置自己的自动装配组件，build之后相应target目录下也会出现相应的文件
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.example.demo.configuration.HelloWorldAutoConfiguration

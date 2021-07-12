@@ -6,7 +6,7 @@ public class HelloWorldConfiguration {
 
     //进行bean转化声明
     @Bean
-    public String helloWorld(){
+    public String helloWorldEnable(){
         return "this is hello world bean tran";
     }
 }
